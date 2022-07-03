@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <title>Ótica Ebenezer</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="./assets/logo.png" alt="" />
+    </nav>
+    <div class="container">
+      <div class="left">
+        <h1>
+          Promoções por <br />
+          tempo limitado!
+        </h1>
+        <p>
+          Nos permita te ajudar a ver o mundo de uma forma cada vez mais <br />
+          bela! <br />Venha fazer uma visita ou entre em contato conosco através
+          das nossas<br />
+          redes sociais!
+        </p>
+        <span>Rua Frederico Costa, Periperi - 39</span>
+        <h3>Entre em contato através do nosso Whatsapp:</h3>
+        <p>
+          Clique no botão abaixo para ir diretamente para <br />
+          o nosso whatsapp, ou nos informe seus dados no <br />
+          formulário ao lado para que entremos em contato:
+        </p>
+        <button onclick="goToWhatsapp()">
+          Envie uma mensagem
+        </button>
+      </div>
+      <div class="right">
+        <h2>Nos envie seu contato para que possamos ir até você:</h2>
+        <form action="./api/send-email.php" method="POST">
+          <input type="text" name="name" placeholder="Nome" required />
+          <input type="tel" name="phone" placeholder="Telefone" required />
+          <input type="text" name="email" placeholder="Email" required />
+          <button type="submit">Enviar</button>
+        </form>
+        <div class="divider-container">
+          <div class="row"></div>
+          <h1>ou</h1>
+          <div class="row"></div>
+        </div>
+        <h2>Entre em contato por uma das nossas redes sociais:</h2>
+        <div class="social-container">
+          <div class="social-medias">
+            <a href="https://www.instagram.com/oticaebenezer/"
+              ><img src="./assets/logo-instagram.png" alt="instagram"
+            /></a>
+            <a href="https://www.facebook.com/Otica-Ebenezer-104466248764565/"
+              ><img src="./assets/logo-facebook.png" alt="facebook"
+            /></a>
+            <a
+              href="https://api.whatsapp.com/send?phone=55557185240010&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
+              ><img src="./assets/logo-whatsapp.png" alt="whatsapp"
+            /></a>
+          </div>
+          <a href="/"><img src="./assets/imagem.png" alt="imagem" /></a>
+        </div>
+      </div>
+    </div>
+    <script>
+      function goToWhatsapp() {
+        window.location.href =
+          "https://api.whatsapp.com/send?phone=55557185240010&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!";
+      }
+    </script>
+  </body>
+</html>
